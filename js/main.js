@@ -1,6 +1,48 @@
 'use strict';
 
 /* ============================================================
+   CASES CAROUSEL
+   ============================================================ */
+
+const carouselTrack = document.getElementById('carousel-track');
+const carouselDots  = document.getElementById('carousel-dots');
+const prevBtn       = document.getElementById('carousel-prev');
+const nextBtn       = document.getElementById('carousel-next');
+
+if (carouselTrack) {
+    const slides = Array.from(carouselTrack.querySelectorAll('.carousel-slide'));
+    let current  = 0;
+
+    // Создаём точки
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Слайд ${i + 1}`);
+        dot.addEventListener('click', () => goTo(i));
+        carouselDots.appendChild(dot);
+    });
+
+    function goTo(index) {
+        current = (index + slides.length) % slides.length;
+        carouselTrack.style.transform = `translateX(-${current * 100}%)`;
+        carouselDots.querySelectorAll('.dot').forEach((d, i) => {
+            d.classList.toggle('active', i === current);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    // Свайп на телефоне
+    let startX = 0;
+    carouselTrack.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    carouselTrack.addEventListener('touchend',   e => {
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+    });
+}
+
+/* ============================================================
    NAVIGATION — scroll state & hamburger
    ============================================================ */
 
