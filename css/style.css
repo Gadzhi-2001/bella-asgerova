@@ -69,6 +69,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .section { padding: var(--section-py) 0; }
 .section-alt { background: var(--bg-alt); }
 .section-dark { background: var(--dark); color: var(--on-dark); }
+.section-dark + .section-dark { border-top: 1px solid #3B3631; }
 
 .eyebrow {
     display: block;
@@ -383,8 +384,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
     .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
     .portfolio-item span { display: none; }
     .fact { flex-direction: column; gap: 4px; }
-    .fact-num { font-size: 2rem; }
-    .facts-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .fact-num { font-size: 1.75rem; }
+    .facts-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .fact-label { font-size: 12px; }
     .price-card h3 { min-height: 0; }
     .center-row .btn { width: 100%; }
     body { padding-bottom: 84px; }
