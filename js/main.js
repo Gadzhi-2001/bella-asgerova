@@ -43,13 +43,20 @@ const fadeObserver = new IntersectionObserver((entries) => {
             fadeObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
 
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
-// Hero fires right away (it's already in view)
+// Hero fires right away
 const heroContent = document.querySelector('#hero .fade-in');
 if (heroContent) setTimeout(() => heroContent.classList.add('visible'), 180);
+
+// Fallback: показать все элементы если observer не сработал через 2 секунды
+setTimeout(() => {
+    document.querySelectorAll('.fade-in:not(.visible)').forEach(el => {
+        el.classList.add('visible');
+    });
+}, 2000);
 
 
 /* ============================================================
