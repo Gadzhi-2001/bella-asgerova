@@ -3,430 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Белла Асгерова — Фотограф</title>
+    <title>Белла Асгерова — фотограф в Махачкале</title>
 
-    <meta name="description" content="Белла Асгерова — профессиональный фотограф. Портретная, свадебная и коммерческая съёмка.">
-    <meta name="keywords" content="фотограф, портрет, свадебная съёмка, коммерческая фотография, Белла Асгерова">
+    <meta name="description" content="Фотограф в Махачкале: свадьбы и сватовство, выписки, семейные и индивидуальные съёмки, съёмка для магазинов одежды. Без предоплаты.">
     <meta name="author" content="Белла Асгерова">
+    <meta name="theme-color" content="#0A0A0A">
+    <link rel="canonical" href="https://assgerova.ru/">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Белла Асгерова — Фотограф">
-    <meta property="og:description" content="Создаю визуальные истории, которые остаются навсегда">
-    <meta property="og:image" content="assets/images/hero.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:url" content="https://assgerova.ru/">
+    <meta property="og:title" content="Белла Асгерова — фотограф в Махачкале">
+    <meta property="og:description" content="Свадьбы, семьи, выписки и съёмка для бизнеса. Без предоплаты.">
+    <meta property="og:image" content="https://assgerova.ru/assets/images/web/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="assets/images/web/hero.jpg">
+    <link rel="stylesheet" href="css/style.css">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Белла Асгерова",
-        "jobTitle": "Фотограф",
-        "sameAs": [
-            "https://www.instagram.com/asgrrvva",
-            "https://t.me/asgrrvva"
-        ]
+        "@type": "ProfessionalService",
+        "name": "Белла Асгерова — фотограф",
+        "url": "https://assgerova.ru/",
+        "image": "https://assgerova.ru/assets/images/web/og.jpg",
+        "telephone": "+79618323117",
+        "address": { "@type": "PostalAddress", "addressLocality": "Махачкала", "addressCountry": "RU" },
+        "sameAs": ["https://www.instagram.com/asgrrvva", "https://t.me/asgrrvva"]
     }
     </script>
-
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ======= NAVIGATION ======= -->
-<nav id="navbar">
+<!-- ======= NAVBAR ======= -->
+<header id="navbar">
     <div class="nav-inner">
         <a href="#hero" class="logo">BELLA ASGEROVA</a>
-        <ul class="nav-links">
-            <li><a href="#about">Обо мне</a></li>
-            <li><a href="#pricing">Стоимость</a></li>
-            <li><a href="#portfolio">Портфолио</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
+        <nav class="nav-links" aria-label="Разделы">
+            <a href="#services">Услуги</a>
+            <a href="#portfolio">Портфолио</a>
+            <a href="#pricing">Стоимость</a>
+            <a href="#faq">Вопросы</a>
+            <a href="#contact">Контакты</a>
+        </nav>
         <a href="#contact" class="btn-nav">Записаться</a>
-        <button class="hamburger" id="hamburger" aria-label="Открыть меню">
-            <span></span><span></span><span></span>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span>
         </button>
     </div>
-</nav>
+</header>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <ul>
-        <li><a href="#about" class="mobile-link">Обо мне</a></li>
-        <li><a href="#pricing" class="mobile-link">Стоимость</a></li>
-        <li><a href="#portfolio" class="mobile-link">Портфолио</a></li>
-        <li><a href="#contact" class="mobile-link">Контакты</a></li>
-        <li><a href="#contact" class="mobile-link btn-mobile">Записаться</a></li>
-    </ul>
+<div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Меню">
+        <a href="#services" class="mobile-link">Услуги</a>
+        <a href="#portfolio" class="mobile-link">Портфолио</a>
+        <a href="#pricing" class="mobile-link">Стоимость</a>
+        <a href="#faq" class="mobile-link">Вопросы</a>
+        <a href="#contact" class="mobile-link">Контакты</a>
+    </nav>
+    <a href="https://t.me/asgrrvva" class="btn btn-accent mobile-link">Написать в Telegram</a>
 </div>
 
 <main>
 
-    <!-- ======= HERO ======= -->
-    <section id="hero">
-        <img class="hero-bg" src="assets/images/hero.jpg" alt="">
-        <div class="hero-overlay"></div>
-        <div class="hero-content fade-in">
-            <span class="hero-tagline">Фотограф &middot; Портрет &middot; Свадьба &middot; Коммерция</span>
-            <h1>BELLA<br>ASGEROVA</h1>
-            <p class="hero-sub">Создаю визуальные истории,<br>которые остаются навсегда</p>
-            <a href="#contact" class="btn-hero">Записаться на съёмку</a>
+<!-- ======= HERO (as on the original site) ======= -->
+<section id="hero">
+    <img class="hero-bg" src="assets/images/web/hero.jpg" alt="" fetchpriority="high">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-tagline">Фотограф &middot; Портрет &middot; Свадьба &middot; Коммерция</span>
+        <h1>BELLA<br>ASGEROVA</h1>
+        <p class="hero-sub">Создаю визуальные истории,<br>которые остаются навсегда</p>
+        <a href="#contact" class="btn-hero">Записаться на съёмку</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- ======= FACTS ======= -->
+<section class="facts">
+    <div class="wrap facts-row">
+        <div class="fact"><span class="fact-num">3+</span><span class="fact-label">года снимаю</span></div>
+        <div class="fact"><span class="fact-num">150+</span><span class="fact-label">съёмок</span></div>
+        <div class="fact"><span class="fact-num">0 ₽</span><span class="fact-label">предоплата</span></div>
+        <div class="fact"><span class="fact-num">1 день</span><span class="fact-label">отвечаю на заявку</span></div>
+    </div>
+</section>
+
+<!-- ======= SERVICES ======= -->
+<section id="services" class="section section-dark">
+    <div class="wrap">
+        <div class="section-head">
+            <div><span class="eyebrow">Что снимаю</span><h2 class="h2">Пять направлений</h2></div>
+            <p class="section-note">Не знаете, какой формат нужен? Напишите повод и дату — подскажу вариант.</p>
         </div>
-        <div class="hero-scroll" aria-hidden="true">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
+        <div class="services-grid">
+            <a href="#pricing" class="service fade-in">
+                <img src="assets/images/web/wed-new-5.jpg" alt="Свадебная съёмка" loading="lazy">
+                <h3>Свадьба и сватовство</h3>
+                <p>Свадьбы, сватовство и другие мероприятия — репортаж и детали.</p>
+                <span class="service-price">10 000 ₽ →</span>
+            </a>
+            <a href="#pricing" class="service fade-in">
+                <img src="assets/images/web/port-2.jpg" alt="Семейная съёмка" loading="lazy">
+                <h3>Семейная</h3>
+                <p>Студия или натура, вся семья в кадре.</p>
+                <span class="service-price">4 000 ₽ / час →</span>
+            </a>
+            <a href="#pricing" class="service fade-in">
+                <img src="assets/images/web/vyp-5.jpg" alt="Выписка из роддома" loading="lazy">
+                <h3>Выписка</h3>
+                <p>Первые кадры малыша и семьи — спокойно и бережно.</p>
+                <span class="service-price">от 3 000 ₽ →</span>
+            </a>
+            <a href="#pricing" class="service fade-in">
+                <img src="assets/images/web/port-4.jpg" alt="Индивидуальная съёмка" loading="lazy">
+                <h3>Индивидуальная</h3>
+                <p>Портрет для себя, личного блога или подарка.</p>
+                <span class="service-price">по запросу →</span>
+            </a>
+            <a href="#pricing" class="service fade-in">
+                <img src="assets/images/web/com-1.jpg" alt="Съёмка для бизнеса" loading="lazy">
+                <h3>Для бизнеса</h3>
+                <p>Съёмка для магазинов одежды и предметная съёмка.</p>
+                <span class="service-price">по запросу →</span>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ======= ABOUT ======= -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-photo fade-in">
-                    <img src="assets/images/about.jpg" alt="Белла Асгерова — фотограф">
-                </div>
-                <div class="about-text fade-in">
-                    <span class="section-label">Обо мне</span>
-                    <h2>Я не фотографирую людей&nbsp;— я рассказываю их истории</h2>
-                    <p>Меня зовут Белла, я фотограф с Махачкалы. Занимаюсь фото и видео съёмкой с 2023 года. Помогаю людям сохранить моменты, которые невозможно повторить: первый взгляд, искренний смех, детали свадебного утра.</p>
-                    <p>Провожу:</p>
-                    <ul class="about-list">
-                        <li>семейные фотосъёмки</li>
-                        <li>съёмку мероприятий, сватовства и свадьбы, клиентские дни, выписки</li>
-                        <li>индивидуальные съёмки</li>
-                        <li>коммерческие съёмки для магазинов одежды</li>
-                        <li>предметные фотосъёмки</li>
-                    </ul>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-num">3+</span>
-                            <span class="stat-label">года</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num">150+</span>
-                            <span class="stat-label">съёмок</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num">5</span>
-                            <span class="stat-label">направлений</span>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn-outline">Написать мне</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ======= STEPS ======= -->
+<section class="section">
+    <div class="wrap">
+        <span class="eyebrow">Как это проходит</span>
+        <h2 class="h2 mb">Без неловкости и сюрпризов</h2>
+        <ol class="steps">
+            <li class="step fade-in"><span class="step-n">01</span><h3>Пишете в Telegram</h3><p>Повод, дата и ваши пожелания — этого достаточно, чтобы начать.</p></li>
+            <li class="step fade-in"><span class="step-n">02</span><h3>Продумываем съёмку</h3><p>Выбираем студию или место, обсуждаем образы и настроение.</p></li>
+            <li class="step fade-in"><span class="step-n">03</span><h3>Снимаем</h3><p>Подсказываю позы и веду по ходу — вам не нужно уметь позировать.</p></li>
+            <li class="step fade-in"><span class="step-n">04</span><h3>Получаете фото</h3><p>Семейные — через 7 дней после оплаты, свадьбы и мероприятия — до 3 недель.</p></li>
+        </ol>
+    </div>
+</section>
 
-    <!-- ======= PRICING ======= -->
-    <section id="pricing" class="section section-dark">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-label">Стоимость</span>
-                <h2>Стоимость услуг</h2>
-            </div>
-            <div class="pricing-intro fade-in">
-                <p>Можно ознакомиться с моими услугами ниже.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="price-card fade-in">
-                    <div class="price-top">
-                        <h3>Съёмка мероприятий, свадьбы, сватовства</h3>
-                        <span class="price-tag">10 000 ₽</span>
-                    </div>
-                    <p>Что входит в условия:</p>
-                    <ul class="pricing-list">
-                        <li>я не снимаю девушек с открытым ауртом</li>
-                        <li>лёгкая ретушь лица</li>
-                        <li>готовые фотографии в течение 3 недель после оплаты</li>
-                    </ul>
-                </div>
-
-                <div class="price-card fade-in">
-                    <div class="price-top">
-                        <h3>Семейные фотосъёмки</h3>
-                        <span class="price-tag">4 000 ₽ / час</span>
-                    </div>
-                    <p>Фотостудия оплачивается заказчиком.</p>
-                    <ul class="pricing-list">
-                        <li>готовые фотографии в течение 7 дней после оплаты</li>
-                    </ul>
-                </div>
-
-                <div class="price-card fade-in">
-                    <div class="price-top">
-                        <h3>Клиентские дни</h3>
-                        <span class="price-tag">по запросу</span>
-                    </div>
-                    <ul class="pricing-list">
-                        <li>индивидуальные съёмки</li>
-                        <li>коммерческие съёмки для магазинов одежды</li>
-                        <li>предметные фотосъёмки</li>
-                    </ul>
-                </div>
+<!-- ======= PORTFOLIO ======= -->
+<section id="portfolio" class="section section-alt">
+    <div class="wrap">
+        <div class="section-head">
+            <div><span class="eyebrow">Портфолио</span><h2 class="h2">Живые кадры</h2></div>
+            <div class="filters" role="group" aria-label="Фильтр портфолио">
+                <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">Все</button>
+                <button class="filter-btn" type="button" data-filter="wedding" aria-pressed="false">Свадьба</button>
+                <button class="filter-btn" type="button" data-filter="portrait" aria-pressed="false">Портрет</button>
+                <button class="filter-btn" type="button" data-filter="vypiska" aria-pressed="false">Выписка</button>
+                <button class="filter-btn" type="button" data-filter="commercial" aria-pressed="false">Бизнес</button>
+                <button class="filter-btn" type="button" data-filter="product" aria-pressed="false">Предметная</button>
             </div>
         </div>
-    </section>
+        <div class="portfolio-grid" id="portfolio-grid">
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/wed-new-6.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+            <button class="portfolio-item" type="button" data-category="portrait"><img src="assets/images/web/port-3.jpg" alt="Портрет" loading="lazy"><span>Портрет</span></button>
+            <button class="portfolio-item" type="button" data-category="vypiska"><img src="assets/images/web/vyp-4.jpg" alt="Выписка" loading="lazy"><span>Выписка</span></button>
+            <button class="portfolio-item" type="button" data-category="commercial"><img src="assets/images/web/com-4.jpg" alt="Бизнес" loading="lazy"><span>Бизнес</span></button>
+            <button class="portfolio-item" type="button" data-category="product"><img src="assets/images/web/pred-7.jpg" alt="Предметная" loading="lazy"><span>Предметная</span></button>
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/wed-new-4.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+            <button class="portfolio-item" type="button" data-category="portrait"><img src="assets/images/web/port-4.jpg" alt="Портрет" loading="lazy"><span>Портрет</span></button>
+            <button class="portfolio-item" type="button" data-category="vypiska"><img src="assets/images/web/vyp-6.jpg" alt="Выписка" loading="lazy"><span>Выписка</span></button>
+            <button class="portfolio-item" type="button" data-category="commercial"><img src="assets/images/web/com-5.jpg" alt="Бизнес" loading="lazy"><span>Бизнес</span></button>
+            <button class="portfolio-item" type="button" data-category="product"><img src="assets/images/web/pred-8.jpg" alt="Предметная" loading="lazy"><span>Предметная</span></button>
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/wed-new-5.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+            <button class="portfolio-item" type="button" data-category="portrait"><img src="assets/images/web/port-2.jpg" alt="Портрет" loading="lazy"><span>Портрет</span></button>
+            <button class="portfolio-item" type="button" data-category="vypiska"><img src="assets/images/web/vyp-5.jpg" alt="Выписка" loading="lazy"><span>Выписка</span></button>
+            <button class="portfolio-item" type="button" data-category="commercial"><img src="assets/images/web/com-1.jpg" alt="Бизнес" loading="lazy"><span>Бизнес</span></button>
+            <button class="portfolio-item" type="button" data-category="product"><img src="assets/images/web/pred-1.jpg" alt="Предметная" loading="lazy"><span>Предметная</span></button>
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/p-wed-2.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+            <button class="portfolio-item" type="button" data-category="portrait"><img src="assets/images/web/port-1.jpg" alt="Портрет" loading="lazy"><span>Портрет</span></button>
+            <button class="portfolio-item" type="button" data-category="vypiska"><img src="assets/images/web/vyp-3.jpg" alt="Выписка" loading="lazy"><span>Выписка</span></button>
+            <button class="portfolio-item" type="button" data-category="product"><img src="assets/images/web/pred-3.jpg" alt="Предметная" loading="lazy"><span>Предметная</span></button>
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/wed-new-2.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+            <button class="portfolio-item" type="button" data-category="vypiska"><img src="assets/images/web/vyp-1.jpg" alt="Выписка" loading="lazy"><span>Выписка</span></button>
+            <button class="portfolio-item" type="button" data-category="commercial"><img src="assets/images/web/com-2.jpg" alt="Бизнес" loading="lazy"><span>Бизнес</span></button>
+            <button class="portfolio-item" type="button" data-category="product"><img src="assets/images/web/pred-6.jpg" alt="Предметная" loading="lazy"><span>Предметная</span></button>
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/p-wed-1.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+            <button class="portfolio-item" type="button" data-category="vypiska"><img src="assets/images/web/vyp-2.jpg" alt="Выписка" loading="lazy"><span>Выписка</span></button>
+            <button class="portfolio-item" type="button" data-category="commercial"><img src="assets/images/web/com-3.jpg" alt="Бизнес" loading="lazy"><span>Бизнес</span></button>
+            <button class="portfolio-item" type="button" data-category="product"><img src="assets/images/web/pred-2.jpg" alt="Предметная" loading="lazy"><span>Предметная</span></button>
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/wed-new-3.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+            <button class="portfolio-item" type="button" data-category="product"><img src="assets/images/web/pred-4.jpg" alt="Предметная" loading="lazy"><span>Предметная</span></button>
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/p-wed-3.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+            <button class="portfolio-item" type="button" data-category="product"><img src="assets/images/web/pred-5.jpg" alt="Предметная" loading="lazy"><span>Предметная</span></button>
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/wed-new-1.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+            <button class="portfolio-item" type="button" data-category="wedding"><img src="assets/images/web/wed-7.jpg" alt="Свадьба" loading="lazy"><span>Свадьба</span></button>
+        </div>
+        <div class="center-row">
+            <button class="btn btn-outline" type="button" id="show-more">Показать ещё</button>
+            <a href="https://www.instagram.com/asgrrvva" class="btn btn-outline" target="_blank" rel="noopener">Больше работ в Instagram</a>
+        </div>
+    </div>
+</section>
 
-    <!-- ======= PORTFOLIO ======= -->
-    <section id="portfolio" class="section">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-label">Мои работы</span>
-                <h2>Портфолио</h2>
+<!-- ======= ABOUT ======= -->
+<section id="about" class="section">
+    <div class="wrap split">
+        <img class="about-photo fade-in" src="assets/images/web/about.jpg" alt="Белла Асгерова — фотограф" loading="lazy">
+        <div class="about-text fade-in">
+            <span class="eyebrow">Обо мне</span>
+            <h2 class="h2">Я не фотографирую людей — я рассказываю их истории</h2>
+            <p>Меня зовут Белла, я фотограф из Махачкалы. Снимаю с 2023 года и помогаю сохранить моменты, которые невозможно повторить: первый взгляд, искренний смех, детали свадебного утра, первые дни малыша дома.</p>
+            <p>Работаю деликатно и с уважением к традициям: не снимаю девушек с открытым ауратом. На съёмке подсказываю, как встать и куда смотреть, — позировать не придётся.</p>
+            <span class="signature">— Белла Асгерова</span>
+        </div>
+    </div>
+</section>
+
+<!-- ======= PRICING ======= -->
+<section id="pricing" class="section section-dark">
+    <div class="wrap">
+        <span class="eyebrow">Стоимость</span>
+        <h2 class="h2 mb">Прозрачные цены</h2>
+        <div class="pricing-grid">
+            <div class="price-card fade-in">
+                <h3>Свадьба, сватовство, мероприятия</h3>
+                <div class="price">10 000 ₽</div>
+                <ul>
+                    <li>Лёгкая ретушь лица</li>
+                    <li>Готовые фото — до 3 недель после оплаты</li>
+                    <li>Не снимаю девушек с открытым ауратом</li>
+                </ul>
+                <a href="#contact" class="btn btn-ghost" data-type="Свадьба / сватовство">Узнать про дату</a>
             </div>
-            <div class="portfolio-filters fade-in">
-                <button class="filter-btn active" data-filter="all">Все</button>
-                <button class="filter-btn" data-filter="portrait">Портрет</button>
-                <button class="filter-btn" data-filter="wedding">Свадьба</button>
-                <button class="filter-btn" data-filter="commercial">Коммерция</button>
-                <button class="filter-btn" data-filter="выписка">Выписка</button>
-                <button class="filter-btn" data-filter="предметная">Предметная</button>
+            <div class="price-card price-card--accent fade-in">
+                <h3>Семейная съёмка</h3>
+                <div class="price">4 000 ₽ <small>/ час</small></div>
+                <ul>
+                    <li>Готовые фото — через 7 дней после оплаты</li>
+                    <li>Студия оплачивается отдельно</li>
+                </ul>
+                <a href="#contact" class="btn btn-light" data-type="Семейная съёмка">Записаться</a>
             </div>
-            <div class="portfolio-grid" id="portfolio-grid">
-
-                <!-- ПОРТРЕТ -->
-                <div class="portfolio-item fade-in" data-category="portrait">
-                    <img src="assets/images/port-1.JPG" alt="Портретная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Портрет</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="portrait">
-                    <img src="assets/images/port-2.JPG" alt="Портретная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Портрет</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="portrait">
-                    <img src="assets/images/port-3.JPG" alt="Портретная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Портрет</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="portrait">
-                    <img src="assets/images/port-4.JPG" alt="Портретная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Портрет</span></div>
-                </div>
-
-                <!-- СВАДЬБА -->
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/p-wed-1.jpg" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/p-wed-2.jpg" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/p-wed-3.jpg" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/wed-new-1.jpg" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/wed-new-2.jpg" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/wed-new-3.jpg" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/wed-new-4.jpg" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/wed-new-5.jpg" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/wed-new-6.jpg" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="assets/images/wed-7.JPG" alt="Свадебная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Свадьба</span></div>
-                </div>
-
-                <!-- КОММЕРЦИЯ -->
-                <div class="portfolio-item fade-in" data-category="commercial">
-                    <img src="assets/images/com-1.JPG" alt="Коммерческая съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Коммерция</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="commercial">
-                    <img src="assets/images/com-2.JPG" alt="Коммерческая съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Коммерция</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="commercial">
-                    <img src="assets/images/com-3.JPG" alt="Коммерческая съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Коммерция</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="commercial">
-                    <img src="assets/images/com-4.JPG" alt="Коммерческая съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Коммерция</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="commercial">
-                    <img src="assets/images/com-5.jpg" alt="Коммерческая съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Коммерция</span></div>
-                </div>
-
-                <!-- ВЫПИСКА -->
-                <div class="portfolio-item fade-in" data-category="выписка">
-                    <img src="assets/images/vyp-1.jpg" alt="Выписка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Выписка</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="выписка">
-                    <img src="assets/images/vyp-2.jpg" alt="Выписка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Выписка</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="выписка">
-                    <img src="assets/images/vyp-3.JPG" alt="Выписка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Выписка</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="выписка">
-                    <img src="assets/images/vyp-4.JPG" alt="Выписка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Выписка</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="выписка">
-                    <img src="assets/images/vyp-5.jpg" alt="Выписка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Выписка</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="выписка">
-                    <img src="assets/images/vyp-6.jpg" alt="Выписка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Выписка</span></div>
-                </div>
-
-                <!-- ПРЕДМЕТНАЯ -->
-                <div class="portfolio-item fade-in" data-category="предметная">
-                    <img src="assets/images/pred-1.jpg" alt="Предметная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Предметная</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="предметная">
-                    <img src="assets/images/pred-2.JPG" alt="Предметная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Предметная</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="предметная">
-                    <img src="assets/images/pred-3.JPG" alt="Предметная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Предметная</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="предметная">
-                    <img src="assets/images/pred-4.JPG" alt="Предметная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Предметная</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="предметная">
-                    <img src="assets/images/pred-5.JPG" alt="Предметная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Предметная</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="предметная">
-                    <img src="assets/images/pred-6.JPG" alt="Предметная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Предметная</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="предметная">
-                    <img src="assets/images/pred-7.JPG" alt="Предметная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Предметная</span></div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="предметная">
-                    <img src="assets/images/pred-8.JPG" alt="Предметная съёмка" loading="lazy">
-                    <div class="portfolio-overlay"><span>Предметная</span></div>
-                </div>
-
+            <div class="price-card fade-in">
+                <h3>Выписка из роддома</h3>
+                <div class="price">от 3 000 ₽</div>
+                <ul>
+                    <li>Стоимость зависит от формата — уточню при записи</li>
+                </ul>
+                <a href="#contact" class="btn btn-ghost" data-type="Выписка из роддома">Записаться</a>
+            </div>
+            <div class="price-card fade-in">
+                <h3>Клиентские дни</h3>
+                <div class="price">по запросу</div>
+                <ul>
+                    <li>Индивидуальные съёмки</li>
+                    <li>Съёмки для магазинов одежды</li>
+                    <li>Предметная съёмка</li>
+                </ul>
+                <a href="#contact" class="btn btn-ghost" data-type="Для бизнеса / предметная">Узнать стоимость</a>
             </div>
         </div>
-    </section>
+        <div class="terms">
+            <div><strong>Без предоплаты</strong><span>Оплата после съёмки</span></div>
+            <div><strong>Перенос даты</strong><span>Предупредите минимум за день до съёмки</span></div>
+            <div><strong>Ваши пожелания</strong><span>Укажите при бронировании — всё учту</span></div>
+        </div>
+    </div>
+</section>
 
-    <!-- ======= CONTACT ======= -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="contact-grid">
+<!-- ======= REVIEWS =======
+     Hidden until real reviews arrive: fill the cards, then remove the "hidden" attribute. -->
+<section id="reviews" class="section" hidden>
+    <div class="wrap">
+        <span class="eyebrow">Отзывы</span>
+        <h2 class="h2 mb">Что говорят после съёмки</h2>
+        <div class="reviews-grid">
+            <figure class="review"><blockquote>Текст отзыва</blockquote><figcaption>Имя · Свадьба</figcaption></figure>
+            <figure class="review"><blockquote>Текст отзыва</blockquote><figcaption>Имя · Выписка</figcaption></figure>
+            <figure class="review"><blockquote>Текст отзыва</blockquote><figcaption>Имя · Семейная</figcaption></figure>
+        </div>
+    </div>
+</section>
 
-                <div class="contact-info fade-in">
-                    <span class="section-label">Написать мне</span>
-                    <h2>Давайте создадим что-то вместе</h2>
-                    <p>Расскажите о вашей идее — отвечу в течение дня и предложу варианты сотрудничества.</p>
-                    <div class="contact-details">
-                        <a href="tel:+79618323117" class="contact-item">
-                            <span class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.45 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.35 1.15h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.57A16 16 0 0015 16.63l.75-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.73 2.04z"/></svg>
-                            </span>
-                            <span>8 (961) 832-31-17</span>
-                        </a>
-                        <a href="https://t.me/asgrrvva" target="_blank" rel="noopener noreferrer" class="contact-item">
-                            <span class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.19 3.18L2.5 10.37c-1.24.5-1.23 1.19-.23 1.5l4.78 1.49 1.99 6.07c.27.84.16 1.17.99 1.17.63 0 .91-.29 1.26-.63l3.03-2.94 6.3 4.64c1.16.64 2 .31 2.29-.8l3.96-17.42c.42-1.64-.63-2.39-1.68-1.37z"/></svg>
-                            </span>
-                            <span>Telegram: @asgrrvva</span>
-                        </a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/asgrrvva?igsh=NDZuZG85aDczYW5i&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                            @asgrrvva
-                        </a>
-                        <a href="https://t.me/asgrrvva" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Telegram">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.19 3.18L2.5 10.37c-1.24.5-1.23 1.19-.23 1.5l4.78 1.49 1.99 6.07c.27.84.16 1.17.99 1.17.63 0 .91-.29 1.26-.63l3.03-2.94 6.3 4.64c1.16.64 2 .31 2.29-.8l3.96-17.42c.42-1.64-.63-2.39-1.68-1.37z"/></svg>
-                            @asgrrvva
-                        </a>
-                    </div>
-                </div>
+<!-- ======= FAQ ======= -->
+<section id="faq" class="section section-alt">
+    <div class="wrap faq">
+        <div>
+            <span class="eyebrow">Частые вопросы</span>
+            <h2 class="h2">Перед записью</h2>
+            <p class="section-note">Не нашли ответ — спросите в Telegram, отвечу в течение дня.</p>
+        </div>
+        <div class="faq-list">
+            <details><summary>Нужна ли предоплата?</summary><p>Нет, предоплаты нет. Оплата после съёмки.</p></details>
+            <details><summary>Можно перенести дату?</summary><p>Да. Просто предупредите минимум за день до съёмки.</p></details>
+            <details><summary>Можно указать пожелания?</summary><p>Да, при бронировании расскажите всё, что важно: образы, место, моменты, которые обязательно нужно снять. Всё учту.</p></details>
+            <details><summary>Через сколько будут готовы фото?</summary><p>Семейная съёмка — через 7 дней после оплаты. Свадьбы и мероприятия — до 3 недель.</p></details>
+            <details><summary>Я не умею позировать. Получится?</summary><p>Да. Я подсказываю, как встать и куда смотреть, — самые живые кадры получаются между позами.</p></details>
+            <details><summary>Кто оплачивает студию?</summary><p>Аренда студии оплачивается отдельно, заказчиком.</p></details>
+        </div>
+    </div>
+</section>
 
-                <div class="contact-form-wrap fade-in">
-                    <form class="contact-form" id="contact-form" novalidate>
-                        <div class="form-group">
-                            <label for="name">Имя</label>
-                            <input type="text" id="name" name="name" placeholder="Ваше имя" required autocomplete="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
-                        </div>
-                        <div class="form-group">
-                            <label for="shoot-type">Тип съёмки</label>
-                            <select id="shoot-type" name="shoot-type" required>
-                                <option value="" disabled selected>Выберите услугу</option>
-                                <option value="portrait">Портретная съёмка</option>
-                                <option value="wedding">Свадьба / Love story</option>
-                                <option value="commercial">Коммерческая съёмка</option>
-                                <option value="other">Другое</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Сообщение</label>
-                            <textarea id="message" name="message" placeholder="Расскажите о вашей идее..." rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Отправить заявку</button>
-                        <p class="form-note">Заявки принимаю в Telegram — отвечу быстро</p>
-                    </form>
-                </div>
-
+<!-- ======= CONTACT ======= -->
+<section id="contact" class="section">
+    <div class="wrap split split--top">
+        <div class="contact-info">
+            <span class="eyebrow">Запись</span>
+            <h2 class="h2 h2--xl">Давайте выберем дату для вашей съёмки</h2>
+            <p>Напишите повод и примерную дату — пришлю свободные окна и идеи по образу.</p>
+            <a href="https://t.me/asgrrvva" class="btn btn-accent" target="_blank" rel="noopener">Написать в Telegram @asgrrvva</a>
+            <div class="contact-links">
+                <a href="tel:+79618323117">8 (961) 832-31-17</a>
+                <a href="https://www.instagram.com/asgrrvva" target="_blank" rel="noopener">Instagram @asgrrvva</a>
+                <span>Махачкала · студия и выезд</span>
             </div>
         </div>
-    </section>
+        <form class="contact-form" id="contact-form" novalidate>
+            <h3>Или заполните заявку</h3>
+            <p class="form-hint">Откроется Telegram с готовым сообщением — останется нажать «Отправить».</p>
+            <label>Имя<input type="text" id="name" autocomplete="name" placeholder="Как к вам обращаться" required></label>
+            <label>Телефон<input type="tel" id="phone" autocomplete="tel" placeholder="+7" required></label>
+            <div class="form-row">
+                <label>Что снимаем
+                    <select id="shoot-type" required>
+                        <option value="">Выберите</option>
+                        <option>Свадьба / сватовство</option>
+                        <option>Семейная съёмка</option>
+                        <option>Выписка из роддома</option>
+                        <option>Индивидуальная съёмка</option>
+                        <option>Для бизнеса / предметная</option>
+                        <option>Пока не знаю</option>
+                    </select>
+                </label>
+                <label>Дата<input type="text" id="date" placeholder="Например, 20 декабря"></label>
+            </div>
+            <label>Пожелания<textarea id="message" rows="3" placeholder="Образы, место, важные моменты, которые нужно снять"></textarea></label>
+            <button type="submit" class="btn btn-dark btn-submit">Отправить заявку</button>
+        </form>
+    </div>
+</section>
 
 </main>
 
-<!-- ======= FOOTER ======= -->
-<footer>
-    <div class="container">
-        <div class="footer-inner">
-            <a href="#hero" class="footer-logo">BELLA ASGEROVA</a>
-            <nav class="footer-links" aria-label="Навигация в подвале">
-                <a href="#about">Обо мне</a>
-                <a href="#pricing">Стоимость</a>
-                <a href="#portfolio">Портфолио</a>
-                <a href="#contact">Контакты</a>
-            </nav>
-            <p class="footer-copy">&copy; 2025 Белла Асгерова. Все права защищены.</p>
-        </div>
+<footer class="footer">
+    <div class="wrap footer-row">
+        <span class="footer-logo">BELLA ASGEROVA</span>
+        <span>Фотограф · Махачкала · © <span id="year">2026</span></span>
     </div>
 </footer>
 
-<!-- ======= LIGHTBOX ======= -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото">
-    <button class="lightbox-close" id="lightbox-close" aria-label="Закрыть">&times;</button>
-    <button class="lightbox-prev" id="lightbox-prev" aria-label="Предыдущее фото">&#8249;</button>
-    <button class="lightbox-next" id="lightbox-next" aria-label="Следующее фото">&#8250;</button>
-    <div class="lightbox-content">
-        <img id="lightbox-img" src="" alt="">
-    </div>
+<!-- Sticky CTA on phones -->
+<div class="mobile-cta">
+    <a href="https://t.me/asgrrvva" class="btn btn-accent" target="_blank" rel="noopener">Написать в Telegram</a>
+    <a href="tel:+79618323117" class="btn btn-outline btn-icon" aria-label="Позвонить">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+    </a>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" type="button" aria-label="Закрыть">×</button>
+    <button class="lb-prev" type="button" aria-label="Предыдущее фото">‹</button>
+    <img class="lb-img" alt="">
+    <button class="lb-next" type="button" aria-label="Следующее фото">›</button>
 </div>
 
 <script src="js/main.js"></script>
